@@ -6,6 +6,8 @@ output*/**
 *.pt
 *.weights
 *.txt
+*.png
+*copy*
 
 .idea/
 .DS_Store
