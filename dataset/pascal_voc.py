@@ -83,12 +83,17 @@ class pascal_voc(imdb):
         """
         Return the default path where PASCAL VOC is expected to be installed.
         """
+        if self._year == 'face':
+            return os.path.join(cfg.BASE_DIR, 'data_face')
+        elif self._year == 'face_new':
+            return os.path.join(cfg.BASE_DIR, 'data_face', 'dataset_face_new')
+        
         #return os.path.join(data_dir, 'VOCdevkit' + self._year)
         #return r"C:\python_work\tftrain\workspace\YOLOv2_FACE\data_face"
-        if self._year == 'face':
-            return r"C:\python_work\tftrain\workspace\YOLOv2_FACE\data_face"
-        elif self._year == 'face_new':
-            return r"C:\python_work\tftrain\workspace\YOLOv2_FACE\data_face\dataset_face_new"
+        #if self._year == 'face':
+        #    return r"C:\python_work\tftrain\workspace\YOLOv2_FACE\data_face"
+        #elif self._year == 'face_new':
+        #    return r"C:\python_work\tftrain\workspace\YOLOv2_FACE\data_face\dataset_face_new"
 
     def _load_image_set_index(self):
         """
