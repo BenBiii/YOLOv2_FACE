@@ -54,7 +54,8 @@ def writexml(idx, head, bbxes, tail):
     f = open(filename, "w")
     f.write(head)
     for bbx in bbxes:
-        f.write(objstr % ('face', bbx[0], bbx[1], bbx[0] + bbx[2], bbx[1] + bbx[3]))
+        f.write(objstr % ('face', bbx[0] + 1, bbx[1] + 1, bbx[0] + bbx[2], bbx[1] + bbx[3]))
+        #f.write(objstr % ('face', bbx[0], bbx[1], bbx[0] + bbx[2], bbx[1] + bbx[3]))
     f.write(tail)
     f.close()
 
